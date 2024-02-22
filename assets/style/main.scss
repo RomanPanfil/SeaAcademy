@@ -1,0 +1,38 @@
+@import 'fonts/fonts.scss';
+@import 'base/colors.scss';
+@import 'base/grid.scss';
+@import 'base/fonts.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+
+button,
+input {
+  border: 0;
+  outline: none!important;
+  -webkit-appearance: none!important;
+  border-radius: 0!important;
+}
+
+.hidden {
+  display: none!important;
+  &__mobile {
+    @media (max-width: $mobile-break-point) {
+      display: none !important;
+    }
+  }
+  &__desktop {
+    @media (min-width: $mobile-break-point + 1px) {
+      display: none !important;
+    }
+  }
+}

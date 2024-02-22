@@ -1,0 +1,25 @@
+$blue: #2B82DD;
+$blue-ll: #2B82DD1A;
+$blue-l: #F0F8FF;
+$black: #000000;
+$black-d: #222222;
+$white: #ffffff;
+$yellow: #FFC327;
+$pink: #DD2B6B;
+$gray: #999999;
+
+.colors {
+  &__font {
+    &_blue-l {
+      color: $blue-l;
+    }
+    &_blue {
+      color: $blue;
+    }
+  }
+  &__background {
+    &_blue-l {
+      background-color: $blue-l;
+    }
+  }
+}

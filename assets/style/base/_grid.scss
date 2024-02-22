@@ -1,0 +1,63 @@
+// Это не редактируем
+$base: 1200; // Const
+$mobile-base: 360; // Const
+$base-font-size: 16; // Anchor
+
+$lg-breakpoint: 1680;
+$sm-breakpoint: 767;
+
+$content-size: 1400; // Ругулируем ширину контента
+
+$lg-font-size: $base-font-size / ($lg-breakpoint / 100);
+$sm-font-size: ($lg-font-size / $mobile-base) * $base * ($lg-breakpoint / $content-size);
+
+@function px2rem($size) {
+  @if ($size == 0) {
+    @return 0;
+  }
+
+  @return (($size / $base) * $content-size) / $base-font-size + 0rem;
+}
+
+@function p2r($size) {
+  @if ($size == 0) {
+    @return 0;
+  }
+
+  @return (($size / $base) * $content-size) / $base-font-size + 0rem;
+}
+
+$desktop-break-point: $lg-breakpoint + 0px;
+$mobile-break-point: $sm-breakpoint + 0px;
+
+html {
+  font-size: $base-font-size + 0px;
+
+  @media (max-width: $desktop-break-point) {
+    font-size: $lg-font-size + 0vw;
+  }
+  @media (max-width: $mobile-break-point) {
+    font-size: $sm-font-size + 0vw;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin container {
+  width: px2rem($base);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $mobile-break-point) {
+    width: 100%;
+    padding-left: px2rem(24);
+    padding-right: px2rem(24);
+  }
+}
+
+.container {
+  @include container;
+}

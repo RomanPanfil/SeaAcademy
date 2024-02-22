@@ -1,0 +1,7 @@
+{
+  "name": "SEA-ACADEMY",
+  "short_name": "SeaAcademy",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "130945280786"
+}

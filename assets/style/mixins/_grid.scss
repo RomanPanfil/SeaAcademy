@@ -1,0 +1,11 @@
+@mixin sm {
+  @media (max-width: $mobile-break-point) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $mobile-break-point + 1px) {
+    @content;
+  }
+}

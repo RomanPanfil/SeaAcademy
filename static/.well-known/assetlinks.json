@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.pfood.pfood",
+    "sha256_cert_fingerprints":
+    ["4A:BC:76:FE:F8:0D:09:C4:B8:FE:FE:B6:81:34:95:AC:2E:43:DF:09:A4:02:81:C8:2A:15:15:02:19:73:B4:29"]
+  }
+}]
